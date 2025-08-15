@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+        <style>
+            img {
+                width: 50%
+            }
+            
+            h1 {
+                padding: 10px;
+                border-radius: 10px;
+                border 2px solid black;
+                font-style: italic;
+            }
+            @font-face {
+                font-family: Futura;
+                src: url('futura.ttf'); 
+            }
+        </style>
+        </head>
+        <body>
+            <main>
+                <img src="strangerthroughthewindow.png">
+                <h1>Stranger through the Window</h1>
+                    <p>The Stranger through
+the Window is an art installation that explores the theme of hidden narratives of
+everyday people through three suspended cubes. The idea for this project originated from <a href="https://en.wikipedia.org/wiki/Rear_Window">Rear Window</a> (1954), a thriller that
+follows a man who is confined to his apartment that begins to believe his neighbor has
+committed a murder by just observing them from his rear window.  We are one in eight billion, and every
+individual has their own life, perspective, and challenges that they take with them. What
+we observe from the outside, reveals nothing about their complex dramas, struggles,
+and joys unfolding within. Each illuminated window becomes a portal into each person's
+inner world, offering intimate glimpses into their complex lives. </p>
+<br>                    
+<hr>
+                    <br>
+
+                    <img src="IMG_0090.jpeg">
+                    <h1>Orchid Code</h1>
+                        <p>Orchid Code is a hanging light fixture that transforms the molecular chemistry of a floral
+fragrance into an illuminated sculptural piece. This chandelier serves as both functional lighting
+design and artwork, demonstrating how science can be reimagined through artistic interpretation
+and fabrication. We often overlook the sophisticated chemistry that occurs in common everyday
+pleasures such as scent.</p>
+
+<br>                    
+<hr>
+                    <br>
+
+                    <img src="crescendoincolor.png">
+                    <h1>Crescendo in Color</h1>
+                        <p>Crescendo in Color transforms audio into visual art by converting musical compositions into dot
+patterns. This piece utilizes Google Gemini for code generation and Processing for generating
+real-time visualizations. Each musical note corresponds to a specific color, while differing
+volume determines dot size. This approach demonstrates fundamental media arts principles
+including data visualization and AI tools. This piece demonstrates the expanding role of
+technology in contemporary art practice. The visualizations create a bridge between auditory and
+visual perception, making music accessible through a different sense.</p>
+
+<br>
+<br>
+<br>
+  </main>
+    <footer>
+        <p>©2025 Gabby Wang </p>
+    </footer>
+</body>
+
+</html>
