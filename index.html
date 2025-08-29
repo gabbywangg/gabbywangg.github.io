@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- p5.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+  <script src="sketch.js" defer></script> <!-- your custom sketch -->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <span>Gabby Wang</span>
+    </div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="projects.html">Projects ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="project1.html">The Stranger through the Window</a></li>
+          <li><a href="project2.html">Orchid Code</a></li>
+          <li><a href="project3.html">Cafe Matcha</a></li>
+          <li><a href="project4.html">Crescendo in Color</a></li>
+          <li><a href="project5.html">Mini House</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- title -->
+ <section class="hero">
+  <div class="hero-content">
+    <h1>GABBY WANG</h1>
+    <h2>Artist | Engineer</h2>
+    <br>
+    <img src="me.png" alt="My Photo" class="profile-pic">
+  </div>
+</section>
+
+  <br>
+
+
+  <!-- About Preview -->
+  <section class="preview about-preview">
+    <h2>About Me</h2>
+    <p>
+      My name is Gabby Wang, and I am a 3rd year chemical engineering major and media arts and design minor. Ever since I was little, I loved creating things with my hands such as painting, crocheting, and jewelry making. I strive to work with the intersection of biological sciences and art. My inspiration comes from biology and the natural world, whether that be nature or deeper into the chemistry of biology. In nature there are endless forms and patterns to take inspiration from.
+As an artist, I am always looking for new ways to expand my knowledge of design and explore new techniques.
+
+    </p>
+  </section>
+
+  <!-- Featured Projects Preview -->
+  <section class="preview projects-preview">
+    <h2>Projects</h2>
+    <div class="featured-grid">
+      <a href="projects/project1.html" class="featured-card">
+        <img src="project1.png" alt="Project 1">
+        <div class="overlay"><span>Stranger through the Window</span></div>
+      </a>
+      <a href="projects/project2.html" class="featured-card">
+        <img src="project2.jpeg" alt="Project 2">
+        <div class="overlay"><span>Orchid Code</span></div>
+      </a>
+      <a href="projects/project3.html" class="featured-card">
+        <img src="project3.png" alt="Project 3">
+        <div class="overlay"><span>Cafe Matcha</span></div>
+      </a>
+    </div>
+    <a href="projects.html" class="btn">All Projects</a>
+  </section>
