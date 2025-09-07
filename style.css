@@ -343,6 +343,23 @@ button:hover {
   flex: 1;            /* text takes the remaining space */
 }
 
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* stack items vertically */
+    align-items: center;    /* center photo and text */
+    text-align: center;     /* optional, centers paragraph text */
+  }
+
+  .about-content p {
+    margin-top: 20px;       /* space between photo and text */
+  }
+
+  .about-content img {
+    width: 200 px;           /* optionally make photo smaller on mobile */
+    height: 200 px;
+  }
+}
+
 .hero {
   width: 100%;           /* full width */
   max-width: none;       /* remove the 900px limit */
@@ -454,6 +471,14 @@ button:hover {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;  /* stack left and right vertically */
+    align-items: center;     /* center content */
+    gap: 20px;               /* reduce gap */
+    margin: 20px;            /* adjust margin */
+  }
+  
 footer {
   background-color: #f7f5e9;  /* soft background */
   padding: 20px;
