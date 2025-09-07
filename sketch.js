@@ -1,3 +1,7 @@
+/*this sketch was created by ChatGPT and edited to match my color paletteand the sizing and order of the dots*/
+/*ChatGPT prompt: give me an interactive p5.js sketch that is composed of lots of dots and wherever your mouse is the dots go away from it. 
+make sure the dots are very randomized in location without much order. it should resembles freckles or stars*/
+
 let points = [];
 let SPACING = 20;
 let DOT_SIZE = 4;
@@ -10,14 +14,14 @@ let palette = [];
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent("hero-sketch"); // attach canvas to hero section
+  canvas.parent("hero-sketch");
   noStroke();
 
   palette = [
-      color(204, 103, 94),    // tomato red
-    color(116, 152, 161),   // steel blue
-    color(158, 141, 72),   // medium sea green
-    color(223, 147, 128),  // violet
+      color(204, 103, 94), 
+    color(116, 152, 161), 
+    color(158, 141, 72),   
+    color(223, 147, 128),  
     color(255, 255, 255) 
   ];
 
@@ -25,14 +29,13 @@ function setup() {
 }
 
 function draw() {
-  background(243, 236, 218); // cream background
+  background(243, 236, 218);
 
   for (let p of points) {
-    // spring back
+   
     p.pos.x = lerp(p.pos.x, p.home.x, RETURN_SPEED);
     p.pos.y = lerp(p.pos.y, p.home.y, RETURN_SPEED);
 
-    // mouse repulsion
     if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
       let dx = p.pos.x - mouseX;
       let dy = p.pos.y - mouseY;
@@ -44,7 +47,6 @@ function draw() {
         p.pos.x += (dx / d) * strength;
         p.pos.y += (dy / d) * strength;
 
-        // cap displacement
         let ox = p.pos.x - p.home.x;
         let oy = p.pos.y - p.home.y;
         let o2 = ox * ox + oy * oy;
