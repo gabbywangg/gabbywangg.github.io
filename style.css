@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 1;
@@ -13,8 +12,6 @@ body {
   padding-top: 80px;
 }
 
-
-/* Navbar */
 nav {
   position: fixed;
   top: 0;
@@ -27,6 +24,12 @@ nav {
   padding: 1rem;
   box-shadow: 0 0.5px 1px #ce5648;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0.5rem 1rem; 
+  }
 }
 
 nav ul {
@@ -44,15 +47,14 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #ce5648; /* accent */
+  color: #ce5648;
 }
 
-/* Logo + Name */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: auto; /* pushes menu to the right */
+  margin-right: auto;
 }
 
 .logo img {
@@ -61,16 +63,30 @@ nav ul li a.active {
   object-fit: contain;
 }
 
-/* Dropdown container */
+@media (max-width: 768px) {
+  .logo {
+    display: none; 
+  }
+
+  nav ul {
+    justify-content: space-around; 
+    flex-wrap: nowrap;        
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;          
+  }
+}
+
 .dropdown {
   position: relative;
 }
 
-/* Hide dropdown by default */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* show below menu item */
+  top: 100%; 
   left: 0;
   background: #ce5648;
   padding: 0.5rem 0;
@@ -155,14 +171,14 @@ button:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  gap: 20px; /* spacing between cards */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
   margin-top: 30px;
 }
 
 .project-card {
   position: relative;
-  aspect-ratio: 1 / 1; /* forces square shape */
+  aspect-ratio: 1 / 1; 
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -179,7 +195,7 @@ button:hover {
 .project-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(238, 97, 99, 0.9); /* your accent color w/ opacity */
+  background: rgba(238, 97, 99, 0.9); 
   color: #fbf6d8;
   display: flex;
   justify-content: center;
@@ -218,7 +234,6 @@ button:hover {
   opacity: 1;
 }
 
-/* Sketch section */
 .sketch-section {
   padding: 60px 20px;
   text-align: center;
@@ -236,36 +251,34 @@ button:hover {
   gap: 20px;
 }
 
-/* Make each card a perfect square */
 .featured-card {
   position: relative;
-  aspect-ratio: 1 / 1;   /* force square shape */
+  aspect-ratio: 1 / 1;  
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
 }
 
-/* Image fills card without stretching */
 .featured-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* keeps proportions, crops excess */
+  object-fit: cover;  
   display: block;
 }
 
-/* Hover overlay stays consistent */
 .featured-card .overlay span {
-  display: block;          /* makes it respect width */
-  max-width: 90%;          /* keeps text inside the box */
-  word-wrap: break-word;   /* allows breaking if needed */
-  text-align: center;      /* centers text nicely */
-  line-height: 1.4;        /* gives breathing room between rows */
+  display: block;    
+  max-width: 90%;         
+  word-wrap: break-word;   
+  text-align: center;      
+  line-height: 1.4;       
 }
+
 .featured-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(238, 97, 99, 0.9); /* your accent color w/ opacity */
+  background: rgba(238, 97, 99, 0.9); 
   color: #fbf6d8;
   display: flex;
   justify-content: center;
@@ -285,8 +298,8 @@ button:hover {
 .profile-pic {
   width: 200px;
   height: 200px;
-  object-fit: cover;   /* makes sure your face fits nicely */
-  border-radius: 50%;  /* circular image */
+  object-fit: cover;  
+  border-radius: 50%; 
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -304,8 +317,8 @@ button:hover {
 
 .collage-grid img {
   width: 100%;
-  height: 250px;        /* makes them consistent */
-  object-fit: cover;    /* crops nicely */
+  height: 250px;     
+  object-fit: cover;  
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -316,46 +329,46 @@ button:hover {
 }
 
 .name-logo {
-  max-width: 700px;   /* adjust depending on how wide your image is */
+  max-width: 700px;  
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;     /* centers it */
+  margin: 0 auto;  
 }
 
 .about-content {
   display: flex;
   align-items: center;
-  gap: 30px;          /* space between image and text */
-  flex-wrap: wrap;    /* lets it stack on smaller screens */
+  gap: 30px;         
+  flex-wrap: wrap;  
 }
 
 .about-content img {
   flex-shrink: 0;
-  width: 200px;       /* adjust size */
+  width: 200px;      
   height: 200px;
   object-fit: cover;
-  border-radius: 50%; /* circular image */
+  border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .about-content p {
-  flex: 1;            /* text takes the remaining space */
+  flex: 1;         
 }
 
 @media (max-width: 768px) {
   .about-content {
-    flex-direction: column; /* stack items vertically */
-    align-items: center;    /* center photo and text */
-    text-align: center;     /* optional, centers paragraph text */
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;   
   }
 
   .about-content p {
-    margin-top: 20px;       /* space between photo and text */
+    margin-top: 20px;
   }
 
   .about-content img {
-    width: 200 px;           /* optionally make photo smaller on mobile */
+    width: 200 px;    
     height: 200 px;
   }
 }
@@ -407,17 +420,17 @@ button:hover {
 .btn {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ce5648;   /* dark background */
-  color: #fff;              /* white text */
+  background-color: #ce5648;   
+  color: #fff;            
   font-weight: 500;
-  text-decoration: none;    /* remove underline */
-  border-radius: 30px;      /* fully curved edges */
+  text-decoration: none;   
+  border-radius: 30px;   
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #24436a;   /* lighter on hover */
-  transform: translateY(-2px); /* subtle lift */
+  background-color: #24436a;  
+  transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
